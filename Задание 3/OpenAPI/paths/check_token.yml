@@ -1,19 +1,16 @@
-post:
+get:
   description: Проверить токен восстановления
   tags:
     - Восстановление пароля
   parameters:
+    - name: uuid
+      in: query
+      description: Токен восстановления пароля
+      required: true
+      schema:
+        type: string
+        format: uuid
     - $ref: common/i18n_param.yml
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            uuid:
-              description: Токен восстановления пароля
-              type: string
-              format: uuid
   responses:
     '200':
       description: OK
