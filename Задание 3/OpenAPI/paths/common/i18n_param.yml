@@ -1,0 +1,6 @@
+name: Content-Language
+in: header
+description: Язык интерфейса
+schema:
+  type: string
+  default: ru-RU

@@ -1,0 +1,9 @@
+type: object
+properties:
+  code:
+    description: Код ошибки приложения
+    type: integer
+    format: int64
+  message:
+    description: Текстовое описание кода ошибки приложения
+    type: string

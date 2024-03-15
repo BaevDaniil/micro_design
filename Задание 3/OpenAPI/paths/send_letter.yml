@@ -1,0 +1,27 @@
+post:
+  description: Отправить сообщение для восстановления пароля
+  tags:
+    - Восстановление пароля
+  parameters:
+    - $ref: common/i18n_param.yml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              description: Электронная почта пользователя
+              type: string
+              format: email
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Ошибка
+      headers:
+        $ref: "common/i18n_header.yml"
+      content:
+        application/json:
+          schema:
+            $ref: "common/error.yml"

@@ -1,0 +1,4 @@
+Content-Language:
+  description: Язык интерфейса
+  schema:
+    type: string

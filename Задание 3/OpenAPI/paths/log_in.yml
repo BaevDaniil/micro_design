@@ -1,0 +1,40 @@
+post:
+  description: Войти в систему
+  tags:
+    - Получение доступа к системе
+  parameters:
+    - $ref: common/i18n_param.yml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              description: Адрес электронной почты пользователя
+              type: string
+              format: email
+            password:
+              description: Пароль пользователя
+              type: string
+              format: password
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              token:
+                description: JWT
+                type: string
+                format: byte
+    '400':
+      description: Ошибка
+      headers:
+        $ref: "common/i18n_header.yml"
+      content:
+        application/json:
+          schema:
+            $ref: "common/error.yml"

@@ -1,0 +1,19 @@
+post:
+  description: Выйти из системы
+  tags:
+    - Выход из системы
+  parameters:
+    - $ref: common/i18n_param.yml
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Ошибка
+      headers:
+        $ref: "common/i18n_header.yml"
+      content:
+        application/json:
+          schema:
+            $ref: "common/error.yml"
