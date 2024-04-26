@@ -1,0 +1,10 @@
+$background-color: #4d53b3;
+$color: #fff;
+
+.button {
+    background-color: $background-color;
+    color: $color;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 8px;
+}
